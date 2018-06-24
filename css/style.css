@@ -497,5 +497,15 @@ footer p:hover {
       display: none; 
     }
   }
-
+  .social-icon{
+	  font-size:3rem;
+  }
+.page-footer{
+	position: fixed;
+	bottom:0;
+	width:100%;
+}
+.content{
+	margin-top:100px;
+}
  
