@@ -157,6 +157,9 @@ nav #myNavbar{
 #teams .row .flags a:hover {
 	text-decoration: none;
 }
+#teams .row .flags img{
+	width:150px;
+}
 
 /****** program ******/
 
@@ -303,9 +306,6 @@ nav #myNavbar{
 	width: 150px;
 	height: 60px;
 }
-.row {
-	color: #fff;
-}
 .row button {
 	color: #009bdc;
 	font-weight: bold;
@@ -314,39 +314,39 @@ nav #myNavbar{
 
 /****** korfball ******/
 
-#korfball {
+#korfballContainer {
 	background-color: #e6e6e6;
 	padding-bottom: 20px;	
 }
-#korfball h1 {
+#korfballContainer h1 {
 	padding-bottom: 5px;
 	font-size: 45px;
 	color: #00364d;
 }
-#korfball p {
+#korfballContainer p {
 	color: #00364d;
 }
-#korfball h2 {
+#korfballContainer h2 {
 	font-size: 28px;
 	padding-bottom: 10px;
 	color: #00364d;	
 }
-#korfball .row .picture img {
+#korfballContainer .row .picture img {
 	width: 100%;
 	margin-top: 25px;
 }
-#korfball .row .picture iframe {
+#korfballContainer .row .picture iframe {
 	width: 100%;
 	margin-top: 40px;
 }
-#korfball .img-links img {
+#korfballContainer .img-links img {
 	height: 100px;
 	background-color: #fff;
   	border: 6px solid #fff;
 	border-radius: 6px; 
 	margin-right: 15px;
 }
-#korfball .img-links img:hover {
+#korfballContainer .img-links img:hover {
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1); 
@@ -508,4 +508,34 @@ footer p:hover {
 	margin-top:100px;
 	margin-bottom:60px;
 }
- 
+ body, .row{
+	 color:black;
+ }
+ table#groups{
+	 width:100%;
+
+ }
+table#groups th,table#groups td{
+	text-align:center;
+	padding:5px;
+}
+#groups thead th{
+	background-color: aquamarine;
+}
+.schedule{
+	width:100%;
+	border: 1px solid black;
+	border-radius: 15px;
+	text-align:center;
+	margin: 20px 0;
+}
+.schedule thead th{
+	text-align:center;
+	background-color: aqua;
+}
+.schedule th{
+	text-align:right;
+}
+.schedule tr{
+	border-bottom: 1px solid black;
+}
