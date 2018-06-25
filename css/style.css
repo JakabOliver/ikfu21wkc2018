@@ -53,9 +53,7 @@ nav #myNavbar{
 
 /****** photo viewer ******/
 
-.carousel {
-	padding-top: 90px;
-}
+
 .carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #009bdc;
@@ -504,8 +502,10 @@ footer p:hover {
 	position: fixed;
 	bottom:0;
 	width:100%;
+	background-color: #009bdc;
 }
 .content{
 	margin-top:100px;
+	margin-bottom:60px;
 }
  
