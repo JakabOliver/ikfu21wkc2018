@@ -526,9 +526,6 @@ table#groups th,table#groups td{
 .modal-title{
 	display: inline;
 }
-#adminLogin, #adminUpload, #adminDelete{
-	margin:	5rem 5rem;
-}
 .footer-copyright{
 	color:white;
 }

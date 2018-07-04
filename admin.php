@@ -6,9 +6,8 @@
  * Time: 22:41
  */
 session_start();
-
 if(!empty($_POST)){
-    if(!empty($_POST['login'])) {
+    if(isset($_POST['login'])) {
         if ($_POST['username'] == 'media' && $_POST['password'] == 'Almafa') {
             $_SESSION['loggedin'] = true;
             echo 'sikeres login';
@@ -34,7 +33,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']){
     $scanned_directory = array_diff(scandir('news/'), array('..', '.'));
     foreach($scanned_directory as $news){
         $newsArray=json_decode(file_get_contents('news/'.$news));
-        $newsList.=str_replace('$title', $newsArray->title, $newsListTemplate);
+        $newsList.=str_replace(array('$title','$ekezetmentesTitle'), array($newsArray->title, ekezetmentesites($newsArray->title)), $newsListTemplate);
     }
     $html=str_replace('<news>', $newsList, $html);
 }else{
