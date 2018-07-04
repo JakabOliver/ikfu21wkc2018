@@ -1,6 +1,5 @@
 RewriteEngine on
 
-
 #Pages
 RewriteRule ^Venue index.php?mod=venue [NC,L]
 RewriteRule ^Teams index.php?mod=teams [NC,L]
@@ -8,3 +7,4 @@ RewriteRule ^Program index.php?mod=program [NC,L]
 RewriteRule ^Korfball index.php?mod=korfball [NC,L]
 RewriteRule ^Contact index.php?mod=contact [NC,L]
 RewriteRule ^Hungary index.php?mod=hungary [NC,L]
+RewriteRule ^Media admin.php [NC,L]

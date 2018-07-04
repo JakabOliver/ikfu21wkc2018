@@ -159,6 +159,7 @@ nav #myNavbar{
 }
 #teams .row .flags img{
 	width:150px;
+	cursor:pointer;
 }
 
 /****** program ******/
@@ -346,7 +347,7 @@ nav #myNavbar{
 	border-radius: 6px; 
 	margin-right: 15px;
 }
-#korfballContainer .img-links img:hover {
+#korfballContainerfab .img-links img:hover {
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1); 
@@ -503,6 +504,7 @@ footer p:hover {
 	bottom:0;
 	width:100%;
 	background-color: #009bdc;
+	z-index:16;
 }
 .content{
 	margin-top:100px;
@@ -511,21 +513,13 @@ footer p:hover {
  body, .row{
 	 color:black;
  }
- table#groups{
-	 width:100%;
-
- }
 table#groups th,table#groups td{
 	text-align:center;
-	padding:5px;
 }
 #groups thead th{
 	background-color: aquamarine;
 }
 .schedule{
-	width:100%;
-	border: 1px solid black;
-	border-radius: 15px;
 	text-align:center;
 	margin: 20px 0;
 }
@@ -538,4 +532,31 @@ table#groups th,table#groups td{
 }
 .schedule tr{
 	border-bottom: 1px solid black;
+}
+.schedule {
+	border-collapse:separate;
+	border:solid black 1px;
+	border-radius:6px;
+	-moz-border-radius:6px;
+}
+
+.schedule td, .schedule th {
+	border-left:solid black 1px;
+	border-top:solid black 1px;
+}
+
+.schedule td:first-child, .schedule th:first-child {
+	border-left: none;
+}
+
+
+.fab{
+	color:white;
+	font-size:3rem;
+}
+.modal-title{
+	display: inline;
+}
+#adminLogin, #adminUpload, #adminDelete{
+	margin:	5rem 5rem;
 }
