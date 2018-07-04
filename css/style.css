@@ -47,9 +47,6 @@ nav #myNavbar{
     color: #fff !important;
 	background-color: #fff;
 }
-#home button span{
-	background-color: #009bdc
-}
 
 /****** photo viewer ******/
 
@@ -93,16 +90,6 @@ nav #myNavbar{
 
 /****** news ******/
 
-#news h2 {
-	font-size: 35px;
-	color: #00364d;
-}
-#news p {
-	color: #00364d;
-}
-#news h3 {
-	color: #00364d;
-}
 #news .row .picture img {
 	width: 100%;
 	margin-top: 25px;
@@ -141,13 +128,13 @@ nav #myNavbar{
 /****** teams ******/
 #teams {
 	padding-bottom: 30px;
+	border: 3px #737373 solid;
+	border-radius: 25px;
+	margin: 1.5rem 3rem;
 }
 #teams .row .flags {	
 	box-sizing: border-box;
 	transition: transform .2s;
-}
-#teams h4 {
-	color: #00364d;
 }
 #teams .row .flags:hover {
     -ms-transform: scale(1.2); /* IE 9 */
@@ -161,6 +148,10 @@ nav #myNavbar{
 	width:150px;
 	cursor:pointer;
 }
+#teams .row .flags h4{
+	margin-bottom:3rem;
+}
+
 
 /****** program ******/
 
@@ -248,7 +239,7 @@ nav #myNavbar{
 /****** tickets ******/
 
 #tickets h4 {
-	color: #00364d;
+	color: #009bdc;
 	box-sizing: border-box;
 	padding-bottom: 10px;
 }
@@ -315,23 +306,6 @@ nav #myNavbar{
 
 /****** korfball ******/
 
-#korfballContainer {
-	background-color: #e6e6e6;
-	padding-bottom: 20px;	
-}
-#korfballContainer h1 {
-	padding-bottom: 5px;
-	font-size: 45px;
-	color: #00364d;
-}
-#korfballContainer p {
-	color: #00364d;
-}
-#korfballContainer h2 {
-	font-size: 28px;
-	padding-bottom: 10px;
-	color: #00364d;	
-}
 #korfballContainer .row .picture img {
 	width: 100%;
 	margin-top: 25px;
@@ -508,24 +482,19 @@ footer p:hover {
 }
 .content{
 	margin-top:100px;
-	margin-bottom:60px;
+	margin-bottom:40px;
 }
- body, .row{
-	 color:black;
- }
 table#groups th,table#groups td{
 	text-align:center;
 }
-#groups thead th{
-	background-color: aquamarine;
-}
+
 .schedule{
 	text-align:center;
 	margin: 20px 0;
 }
 .schedule thead th{
 	text-align:center;
-	background-color: aqua;
+	background-color: #009bdc;
 }
 .schedule th{
 	text-align:right;
@@ -559,4 +528,18 @@ table#groups th,table#groups td{
 }
 #adminLogin, #adminUpload, #adminDelete{
 	margin:	5rem 5rem;
+}
+.footer-copyright{
+	color:white;
+}
+.teamPicture{
+	max-width:100%;
+	max-height: 100%;
+}
+.backgroundPrimary{
+	background-color: #009bdc;
+	color:white;
+}
+img{
+	max-width:100%;
 }

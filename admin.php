@@ -29,7 +29,7 @@ if(!empty($_POST)){
 
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']){
     $html=file_get_contents("parts/upload.html");
-    $newsListTemplate=file_get_contents("parts/newsListTemplate.html");
+    $newsListTemplate=file_get_contents("parts/templates/newsListTemplate.html");
     $newsList='';
     $scanned_directory = array_diff(scandir('news/'), array('..', '.'));
     foreach($scanned_directory as $news){
