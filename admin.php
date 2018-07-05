@@ -20,6 +20,14 @@ if(!empty($_POST)){
         elseif(empty(trim($_POST['content'])))
             echo 'A tartalom nem lehet üres<br/>';
         else{
+            if (!empty($_FILES)) {
+                error_log(json_encode($_FILES));
+                move_uploaded_file($_FILES['kep']['tmp_name'], 'pictureForNews/' . $_FILES['kep']['name']);
+                $_POST['kep']='pictureForNews/'.$_FILES['kep']['name'];
+            }
+            else {
+                $_POST['kep'] = 'http://placehold.it/200x200';
+            }
             file_put_contents('news/'.ekezetmentesites(trim($_POST['title'])).'.json', json_encode($_POST));
             echo 'sikeres feltöltés';
         }

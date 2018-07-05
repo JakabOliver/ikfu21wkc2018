@@ -29,7 +29,7 @@ if($mod=='teams'){
     $scanned_directory = array_diff(scandir('news/'), array('..', '.'));
     foreach($scanned_directory as $news){
         $newsArray=json_decode(file_get_contents('news/'.$news));
-        $newsContent.=str_replace(array('$title', '$content'), array($newsArray->title, $newsArray->content), $newsTemplate);
+        $newsContent.=str_replace(array('$title', '$content', '$ekezetmentestitle', '$kep'), array($newsArray->title, $newsArray->content, ekezetmentesites($newsArray->title), $newsArray->kep), $newsTemplate);
     }
     //beolvasás
     $content=str_replace('<news>', $newsContent, $content);
