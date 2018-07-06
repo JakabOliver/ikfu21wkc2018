@@ -10,7 +10,7 @@ function deleteNews(id){
                 if (!response.success) {
                     alert('nem sikerült törölni');
                 }
-                window.location.href='/media';
+                window.location.href='media';
                 },
             error: function () {
                 alert('Something is wrong');
@@ -30,8 +30,14 @@ function editNews(id){
                 if (response.success) {
                     let title=response.title;
                     let content=response.content;
+                    let kep=response.kep;
                     $('input[name=title]').val(title);
                     $('textarea[name=content]').text(content);
+                    $('input[name=kep]').val(kep);
+                    if(kep){
+                        $('#newsPictureUpload img').remove();
+                        $('#newsPictureUpload').append($('<img>', {src:kep}));
+                    }
                 }
                 else {
                     alert('nem sikerült törölni');

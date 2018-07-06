@@ -7,9 +7,9 @@
  */
 header('Content-type: application/json');
 if(isset($_POST['token']) && $_POST['token']=='za+nt_ec-B_#-r7k_eeN1smV*Cx?s^') {
-    $file=json_decode(file_get_contents('news/'.$_POST['file'].'.json'));
+    $file=json_decode(file_get_contents('news/'.$_POST['file']));
    // error_log(json_encode($file));
-    $response=array('success'=>true, 'title'=>$file->title, 'content'=>$file->content);
+    $response=array('success'=>true, 'title'=>$file->title, 'content'=>$file->content, 'kep'=>$file->kep);
 }
 else {
     $response=array('success'=>false);

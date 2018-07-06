@@ -26,7 +26,7 @@ if($mod=='teams'){
 }elseif($mod=='main'){
     $newsTemplate=file_get_contents('parts/templates/newsTemplate.html');
     $newsContent='';
-    $scanned_directory = array_diff(scandir('news/'), array('..', '.'));
+    $scanned_directory = array_diff(scandir('news/',1), array('..', '.'));
     foreach($scanned_directory as $news){
         $newsArray=json_decode(file_get_contents('news/'.$news));
         $newsContent.=str_replace(array('$title', '$content', '$ekezetmentestitle', '$kep'), array($newsArray->title, $newsArray->content, ekezetmentesites($newsArray->title), $newsArray->kep), $newsTemplate);

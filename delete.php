@@ -7,7 +7,7 @@
  */
 header('Content-type: application/json');
 if(isset($_POST['token']) && $_POST['token']=='za+nt_ec-B_#-r7k_eeN1smV*Cx?s^') {
-    unlink('news/' . $_POST['file'] . '.json');
+    unlink('news/' . $_POST['file']);
     $isSuccess=true;
 }
 else {

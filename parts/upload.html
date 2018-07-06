@@ -29,8 +29,10 @@
                     <div class="form-group">
                         <label for="content">Tartalom</label>
                         <textarea class="form-control rounded-0" id="content" name="content" rows="10"></textarea>
-                        <input type="file" name="kep" accept="image/*">
-
+                    </div>
+                    <div class="form-group" id="newsPictureUpload">
+                        <input type="file" name="picture" accept="image/*">
+                        <input type="hidden" name="kep">
                     </div>
                     <button type="send" class="btn btn-primary" name="upload">Send</button>
                 </form>

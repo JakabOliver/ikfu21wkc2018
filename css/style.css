@@ -67,7 +67,7 @@ nav #myNavbar{
 .carousel-inner img {
     width: 100%;
     margin: auto;
-    min-height:200px;
+    max-height:600px;
 }
 .item h3 {
 	font-size: 40px;
@@ -557,4 +557,10 @@ img{
 #budapest{
 	margin-top:0;
 	margin-bottom:100px;
+}
+#newsContinaer{
+	margin-top:1rem;
+}
+#newsContinaer h3{
+		margin-top:0;
 }
