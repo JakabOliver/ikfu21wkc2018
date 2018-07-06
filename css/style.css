@@ -44,8 +44,11 @@ nav #myNavbar{
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
-    color: #fff !important;
-	background-color: #fff;
+    color: #009bdc !important;
+	background-color: #009bdc;
+}
+.navbar-toggle .icon-bar {
+	background-color: #009bdc;
 }
 
 /****** photo viewer ******/
@@ -550,4 +553,8 @@ img{
 }
 #hungaryContainer img{
 	margin-bottom:2rem;
+}
+#budapest{
+	margin-top:0;
+	margin-bottom:100px;
 }

@@ -1,5 +1,4 @@
 RewriteEngine on
-
 #Pages
 RewriteRule ^Venue index.php?mod=venue [NC,L]
 RewriteRule ^Teams index.php?mod=teams [NC,L]

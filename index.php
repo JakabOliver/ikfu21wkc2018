@@ -1,6 +1,6 @@
 <?php
-
-$teams=['Hungary', 'Netherlands','Czech Republic', 'England',  'Taiwan','Belgium', 'China',  'Germany', 'Hong Kong','Portugal', 'Turkey'];
+DEFINE('ROOT', $_SERVER['DOCUMENT_ROOT'].'/ikfu21wkc/');
+$teams=array('Hungary', 'Netherlands','Czech Republic', 'England',  'Chinese Taipei','Belgium', 'China',  'Germany', 'Hong Kong China','Portugal', 'Turkey');
 
 $mod="main";
 if(isset($_GET['mod'])){
@@ -9,15 +9,15 @@ if(isset($_GET['mod'])){
 
 
 $html="";
-$head=file_get_contents("parts/head.html");
-$content=file_get_contents("parts/".$mod.".html");
-$footer=file_get_contents("parts/footer.html");
+$head=file_get_contents(ROOT."parts/head.html");
+$content=file_get_contents(ROOT."parts/".$mod.".html");
+$footer=file_get_contents(ROOT."parts/footer.html");
 
 if($mod=='teams'){
     $teamTemplate=file_get_contents('parts/templates/teamTemplate.html');
     $teamsContent='';
     foreach($teams as $k=>$team){
-        $teamDescription=file_get_contents('parts/teams/'.ekezetmentesites($team).'.txt');
+        $teamDescription=file_get_contents(ROOT.'parts/teams/'.ekezetmentesites($team).'.txt');
         $teampic=str_replace(' ', '_', $team);
         $teamsContent.=str_replace(array('$teampic', '$team', '<teambembers>'), array($teampic, $team, $teamDescription), $teamTemplate);
     }
