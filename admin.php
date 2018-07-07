@@ -35,6 +35,21 @@ if(!empty($_POST)){
             echo 'sikeres feltöltés';
         }
     }
+    else if(isset($_POST['sendResult'])){
+    $json=file_get_contents('schedule/'.$_POST['date'].'.json');
+    $array=json_decode($json);
+    $matches=$array->matches;
+    foreach($matches as $match){
+            $match->A_score=$_POST[ekezetmentesites($match->A)];
+            if(isset($match->B))
+                $match->B_score=$_POST[ekezetmentesites($match->B)];
+        }
+        $array->matches=$matches;
+    $json=json_encode($array);
+    file_put_contents('schedule/'.$_POST['date'].'.json', $json);
+//        print_r($_POST);
+  //  print_r($matches);
+    }
 }
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']){
     $html=file_get_contents(ROOT."parts/upload.html");
@@ -46,6 +61,36 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']){
         $newsList.=str_replace(array('$title','$ekezetmentesTitle', '$filename'), array($newsArray->title, ekezetmentesites($newsArray->title), $news), $newsListTemplate);
     }
     $html=str_replace('<news>', $newsList, $html);
+    //matches
+    $date=new DateTime();
+    $scanned_directory =array_diff(scandir('schedule/'), array('..','.'));
+    if(!empty($_GET['day'])){
+        $key=$_GET['day'];
+    }
+    else{
+        $key=array_search($date->format('m.d').'.json', $scanned_directory);
+    }
+    if($key>2)
+        $prev=$key-1;
+    else
+        $prev=2;
+    if($key<9)
+        $next=$key+1;
+    else
+        $next=9;
+    $meccsek="";
+    $json=file_get_contents('schedule/'.$scanned_directory[$key]);
+    $array=json_decode($json);
+
+    foreach($array->matches as $meccs){
+        //print_r($meccs);
+        $meccsTemplate=file_get_contents('parts/templates/scoreTemplate.html');
+        if(empty($meccs->B)) $meccs->B='';
+        if(empty($meccs->A_score)) $meccs->A_score='';
+        if(empty($meccs->B_score)) $meccs->B_score='';
+        $meccsek.=str_replace(array('$time', '$Score_A', '$Score_B', '$A', '$B', '$ekezetmentesA', '$ekezetmentesB'), array($meccs->time, $meccs->A_score, $meccs->B_score, $meccs->A, $meccs->B, ekezetmentesites($meccs->A), ekezetmentesites($meccs->B)), $meccsTemplate);
+    }
+    $html=str_replace(array('$prev', '$next', '$meccsek', '$date', '$day'), array($prev, $next, $meccsek, $array->date, $array->day), $html);
 }else{
     $html=file_get_contents(ROOT."parts/login.html");
 }

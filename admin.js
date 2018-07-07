@@ -19,7 +19,7 @@ function deleteNews(id){
     }
 }
 function editNews(id){
-    let r = confirm("Are you sure you want to edit this news?")
+    let r = confirm("Are you sure you want to edit this news?");
     if(r === true)
     {
         $.ajax({

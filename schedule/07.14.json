@@ -1,0 +1,24 @@
+{
+"date":"07.14",
+"day":"Saturday",
+"matches":[
+{
+"time":"12:00 (5th place)",
+"A":"SF2 Winner",
+"B":"SF3 Winner"
+},
+{
+"time":"14:00 (3th place)",
+"A":"SF4 Loser",
+"B":"SF5 Loser"
+},
+{
+"time":"16:00 (final)",
+"A":"SF4 Winner",
+"B":"SF5 Winner"
+},
+{
+"time":"17:30",
+"A":"Closing Ceremony"
+}
+]}

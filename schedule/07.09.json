@@ -1,0 +1,31 @@
+{
+"date":"07.09",
+"day":"Monday",
+"matches":[
+{
+"time":"12:30",
+"A":"Belgium",
+"B":"Hong Kong China"
+},
+{
+"time":"14:15",
+"A":"Portugal",
+"B":"Chinese Taipei"
+},
+{
+"time":"16:00",
+"A":"China",
+"B":"Turkey"
+},
+{
+"time":"17:45",
+"A":"Hungary",
+"B":"Germany"
+},
+{
+"time":"19:30",
+"A":"Netherlands",
+"B":"Czech Republic"
+}
+]
+}
